@@ -16,12 +16,19 @@ namespace Robots_inc
 
         public Worker(string name, string id, DateTime bDate, string pass)
         {
-            //משימה 1
-            //השלימו את הבנאי המקבל הפרמטרים הנחוצים ליצירת עובד חדש
+            this.fullName = name;
+            this.idNumber = id;
+            this.birthDate = bDate;
+            this.password = pass;
         }
-        //משימה 2
-        //get כתבו פעולות מאחזרות 
+        public string GetName() {  return fullName; }
+        public string GetId() {  return idNumber; }
+        public DateTime GetBirthDate() {  return birthDate; }
+        public string GetPassword() {  return password; }
 
+        public void SetName(string FullName) {  this.fullName = FullName; }
+        public void SetId(string idnumber) { this.idNumber = idnumber; }
+        public void SetPassword(string Password){ this.password = Password; }
         //משימה 3
         //רק לתכונות שניתן לשנות - set כתבו פעולות מעדכנות
 
