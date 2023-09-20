@@ -21,25 +21,23 @@ namespace Robots_inc
             this.birthDate = bDate;
             this.password = pass;
         }
-        public string GetName() {  return fullName; }
-        public string GetId() {  return idNumber; }
-        public DateTime GetBirthDate() {  return birthDate; }
-        public string GetPassword() {  return password; }
+        public string GetName() { return fullName; }
+        public string GetId() { return idNumber; }
+        public DateTime GetBirthDate() { return birthDate; }
+        public string GetPassword() { return password; }
 
-        public void SetName(string FullName) {  this.fullName = FullName; }
+        public void SetName(string FullName) { this.fullName = FullName; }
         public void SetId(string idnumber) { this.idNumber = idnumber; }
-        public void SetPassword(string Password){ this.password = Password; }
-        //משימה 3
-        //רק לתכונות שניתן לשנות - set כתבו פעולות מעדכנות
+        public void SetPassword(string Password) { this.password = Password; }
 
-        //משימה 4
-        // כתבו חתימה פעולה אבסטרקטית לחישוב שכר
+
+        public abstract double Salary();
 
         public override string ToString()
         {
             string str = "";
-            if(birthDate.Equals(DateTime.Today))
-                str=" - HappyBirthDay";
+            if (birthDate.Equals(DateTime.Today))
+                str = " - HappyBirthDay";
             return fullName + " ID." + idNumber + str;
 
         }
