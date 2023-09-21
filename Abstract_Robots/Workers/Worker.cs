@@ -21,6 +21,8 @@ namespace Robots_inc
             this.birthDate = bDate;
             this.password = pass;
         }
+
+        public string Fullname { get { return fullName; } set { fullName = value; } }
         public string GetName() { return fullName; }
         public string GetId() { return idNumber; }
         public DateTime GetBirthDate() { return birthDate; }

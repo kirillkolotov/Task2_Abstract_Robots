@@ -63,5 +63,20 @@ namespace Robots_inc
             }
 
         }
+
+        private void MenuItem_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void ViewWorkers_Click(object sender, RoutedEventArgs e)
+        {
+            workPanel.Children.Clear();
+            activeWorkers.ForEach(worker =>
+            {
+                UcWorker ucWorker = new UcWorker(worker);
+                workPanel.Children.Add(ucWorker);
+            });
+        }
     }
 }
